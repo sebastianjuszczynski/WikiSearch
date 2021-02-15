@@ -34,7 +34,6 @@ import {
     deleteSearchResults();
     processTheSearch();
     setSearchFocus();
-    form.input.blur()
   };
   
   const processTheSearch = async () => {
