@@ -27,5 +27,6 @@ export const setSearchFocus = () => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
       document.getElementById("clear").click();
+      document.getElementById("clear").blur();
     }
   };
