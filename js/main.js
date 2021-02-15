@@ -34,12 +34,13 @@ import {
     deleteSearchResults();
     processTheSearch();
     setSearchFocus();
+    form.input.blur()
   };
   
   const processTheSearch = async () => {
     clearStatsLine();
     const searchTerm = getSearchTerm();
-    if (searchTerm === "") return; //TODO:
+    if (searchTerm === "") return;
     const resultArray = await retrieveSearchResults(searchTerm);
     if (resultArray.length) buildSearchResults(resultArray);
     setStatsLine(resultArray.length);
